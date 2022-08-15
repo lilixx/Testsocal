@@ -1,0 +1,222 @@
+.sticky {
+	display: block;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.bg-darkblue {
+	background-color: $darkblue;
+}
+
+footer {
+	ul{
+		margin-left: 0;
+		padding-left: 0;
+		list-style: none;
+		li a{
+			text-decoration:none;
+			color: $white!important;
+		}
+	}
+    h5{
+        text-transform: uppercase;
+        color: $skyblue;
+    }
+    .footer-area-shedule ul li {
+        border-bottom: 2px solid #00adee;
+        line-height: 2rem;
+    }
+    .footer-area {
+        display: grid;
+        justify-content: center;
+        
+    }
+    .footer-area.logo, .footer-area.footer-area-logoisning {
+        display: flex!important;
+        justify-content: start!important;
+    }
+}
+
+.bg-skyblue, .btn-skyblue{
+    background-color: $skyblue!important;
+
+}
+
+.text-skyblue{
+    color: $skyblue;
+}
+
+h1{
+    font-weight: 600!important;
+}
+
+.mega-menu-item a {
+    text-transform: uppercase!important;
+}
+.cont-best{
+    border-right: 2px solid #00adee;
+    &:last-of-type{
+        border: none!important;
+    }
+} 
+a.btn-white {
+    color: #00adee;
+    background-color: #fff;
+    font-size: 1.5rem;
+    .dashicons.dashicons-email {
+        font-size: 2rem;
+        margin-right: 0.8rem;
+    }
+    &:hover{
+        background-color:#00adee;
+        color: #fff;
+    }    
+}
+.project .video_socal:after {
+    content: "\f236";
+    font-size: 2rem;
+    color: $skyblue;
+    position: absolute;
+    -webkit-transform: translate(-350%, 80%)!important;
+    transform: translate(-350%, 80%)!important;
+    font-size: 4.5rem;
+    font-family: dashicons;
+}
+   
+.text-dark{
+    span.dashicons.dashicons-phone {
+        color: $skyblue;
+    }
+    &:hover{
+        color: #fff!important;
+    }
+}
+.dashicons-phone.shedule {
+    font-size: 2rem;
+    margin-right: 0.5em;
+}
+
+.header_bar{
+    p{
+        margin-bottom: 0!important;
+    }
+    .dashicons.dashicons-email, .dashicons-phone{
+        color:$skyblue;
+    }
+}
+
+
+/* confianza */
+.image_conf {
+    position: relative;
+    transition: all ease-in-out 0.5s;
+    img{
+        display: block;
+    }
+    .title{
+        position: absolute;
+        z-index: 3;
+        bottom: 30px;
+        color: #fff;
+        transition: all ease-in-out 0.5s;
+        width: 100%;
+        text-align: center; 
+    }
+    .description{
+        position: absolute;
+        display: none;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+.image_conf:hover {
+    background:linear-gradient(0deg, rgba(1, 172, 238, 0.9), rgba(1, 172, 238, 1));
+}
+.image_conf:hover img {
+    opacity: 0.3;
+}
+.image_conf:hover .title {
+    bottom: 40%;
+}
+.image_conf:hover .description, .image_conf:hover .title img {
+    display: block;
+    -webkit-animation-name: slide-up;
+            animation-name: slide-up;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    opacity: 0;
+}
+@-webkit-keyframes slide-up {
+    0% {
+      bottom: 0;
+      opacity: 0;
+    }
+    100% {
+      bottom: 15%;
+      opacity: 1;
+    }
+}
+@keyframes slide-up {
+    0% {
+      bottom: 0;
+      opacity: 0;
+    }
+    100% {
+      bottom: 15%;
+      opacity: 1;
+    }
+}
+  
+.image_conf:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 100px;
+    display: block;
+    background: -moz-linear-gradient(top, rgba(11, 67, 73, 0) 0%, #01acee 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(11, 67, 73, 0) 0%, #01acee 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(180deg, rgba(11, 67, 73, 0) 0%, #01acee 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00000000", endColorstr="#000000",GradientType=0 );
+    /* IE6-9 */
+}
+.title.last {
+    bottom: 10px;
+}
+/*end confianza */
+
+@media (max-width: 991.98px) {
+    .cont-best {
+        border-right: none;
+        margin-bottom: 2rem;
+    }
+    img.bg-service {
+        width: 100%;
+    }
+}    
